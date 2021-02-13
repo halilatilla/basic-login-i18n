@@ -4,9 +4,10 @@ import Link from 'next/link'
 import cx from 'classnames'
 import { motion } from 'framer-motion'
 
+import { withTranslation } from '../i18n'
 import { Nav, Button, MenuToggle } from '@/components/index'
 
-export default function Header() {
+const Header = ({ t }) => {
   const [isShowMobile, setIsShowMobile] = useState(false)
 
   const variants = {
@@ -23,13 +24,14 @@ export default function Header() {
       <div className="container header__content">
         <Link href="/">
           <a className="header__logo">
-            {/*   <Image
-              src=''
+            <Image
+              src="/logo.svg"
               width={272}
               height={54}
               priority
               quality="100"
-            /> */}
+            />
+            <span>{t('siteName')}</span>
           </a>
         </Link>
         <div
@@ -41,7 +43,7 @@ export default function Header() {
             <Nav />
           </div>
           <div className="header__login-button">
-            <Button isPrimary>Giriş Yap</Button>
+            <Button isPrimary>{t('login')} </Button>
           </div>
         </div>
         <motion.div
@@ -56,3 +58,9 @@ export default function Header() {
     </header>
   )
 }
+
+Header.getInitialProps = async () => ({
+  namespacesRequired: ['header', 'nav'],
+})
+
+export default withTranslation('header')(Header)

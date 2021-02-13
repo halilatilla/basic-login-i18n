@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { withTranslation } from '../i18n'
 import { Instagram, Facebook, Twitter, YouTube } from '@/icons/index'
 
 const icons = [
@@ -26,13 +27,14 @@ const icons = [
   },
 ]
 
-export default function Footer() {
+const Footer = ({ t }) => {
   return (
     <div className="footer">
       <div className="footer__bottom">
         <div className="container footer__bottom-wrapper">
           <span className="footer__copyright order-1 order-md-0">
-            Copyright © 2020 Basic Login. Her Hakkı Saklıdır.
+            Copyright © 2020 Basic Login.
+            <span>{t('copyright')}</span>
           </span>
           <div className="footer__icons order-0 order-md-1">
             {icons.map((icon, idx) => (
@@ -48,3 +50,9 @@ export default function Footer() {
     </div>
   )
 }
+
+Footer.getInitialProps = async () => ({
+  namespacesRequired: ['footer'],
+})
+
+export default withTranslation('footer')(Footer)

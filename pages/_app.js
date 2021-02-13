@@ -3,6 +3,7 @@ import Router from 'next/router'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import { DefaultSeo } from 'next-seo'
+import { appWithTranslation } from '../i18n'
 
 import SEO from '../next-seo.config'
 import { AuthProvider } from 'stores'
@@ -14,7 +15,7 @@ NProgress.configure({ showSpinner: false, parent: 'body' })
 Router.onRouteChangeStart = () => NProgress.start()
 Router.onRouteChangeComplete = () => NProgress.done()
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -29,3 +30,5 @@ export default function MyApp({ Component, pageProps }) {
     </>
   )
 }
+
+export default appWithTranslation(MyApp)
