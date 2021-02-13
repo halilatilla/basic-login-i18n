@@ -7,6 +7,7 @@ export { default as Badge } from './Badge'
 export { default as ActiveLink } from './ActiveLink'
 export { default as Modal } from './Popups/Modal'
 export { default as MenuToggle } from './MenuToggle'
+export { default as LanguageSwitcher } from './LanguageSwitcher'
 
 //From
 export { default as Input } from './Form/Input'

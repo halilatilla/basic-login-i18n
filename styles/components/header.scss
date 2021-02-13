@@ -18,10 +18,15 @@
     @include d-flex($jc: space-between);
   }
 
-  &__login-button {
+  &__language-switcher {
     margin-left: 60px;
+  }
+
+  &__login-button {
+    margin-left: 40px;
 
     .button {
+      text-transform: capitalize;
       width: 175px;
     }
   }

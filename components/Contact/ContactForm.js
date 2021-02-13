@@ -6,7 +6,7 @@ import { Input, Textarea, Button } from '@/components/index'
 const ContactForm = ({ t }) => {
   return (
     <div className="contact-form">
-      <h3>{t('formTitle')} :</h3>
+      <h3 className="contact-form__title">{t('formTitle')} :</h3>
       <form className="contact-form__form">
         <Input label={t('name')} name="name" type="text" />
         <Input label={t('email')} name="email" type="email" />

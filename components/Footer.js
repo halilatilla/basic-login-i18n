@@ -33,8 +33,7 @@ const Footer = ({ t }) => {
       <div className="footer__bottom">
         <div className="container footer__bottom-wrapper">
           <span className="footer__copyright order-1 order-md-0">
-            Copyright © 2020 Basic Login.
-            <span>{t('copyright')}</span>
+            Copyright © 2020 Basic Login. <span>{t('copyright')}</span>
           </span>
           <div className="footer__icons order-0 order-md-1">
             {icons.map((icon, idx) => (
