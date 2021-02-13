@@ -1,0 +1,42 @@
+.gap {
+  margin-top: $s-gap;
+  margin-bottom: $s-gap;
+}
+
+.gap-bottom {
+  margin-bottom: $s-gap;
+}
+
+.gap-top {
+  margin-top: $s-gap;
+}
+
+@media (max-width: 991px) {
+  .gap {
+    margin-top: $s-gap-tablet;
+    margin-bottom: $s-gap-tablet;
+  }
+
+  .gap-bottom {
+    margin-bottom: $s-gap-tablet;
+  }
+
+  .gap-top {
+    margin-top: $s-gap-tablet;
+  }
+}
+
+@media (max-width: 767px) {
+  .gap {
+    margin-top: $s-gap-mobile;
+    margin-bottom: $s-gap-mobile;
+  }
+
+  .gap-bottom {
+    margin-bottom: $s-gap-mobile;
+  }
+
+  .gap-top {
+    margin-top: $s-gap-mobile;
+  }
+}

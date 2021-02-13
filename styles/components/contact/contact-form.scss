@@ -1,0 +1,33 @@
+.contact-form {
+  max-width: 420px;
+  width: 100%;
+
+  &__form {
+    margin-top: 48px;
+
+    .form-container {
+      margin-bottom: 24px;
+
+      textarea {
+        min-height: 154px;
+        max-height: 154px;
+        margin-bottom: 10px !important;
+      }
+    }
+
+    .button {
+      width: 175px;
+      margin-left: auto;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-form {
+    margin-left: initial;
+
+    &__form {
+      margin-top: 32px;
+    }
+  }
+}

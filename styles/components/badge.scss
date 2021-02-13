@@ -1,0 +1,28 @@
+.badge-custom {
+  @include d-flex;
+  border-radius: $s-border-radius;
+  font-size: $fs-small;
+  font-weight: $fw-bold;
+  height: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow: hidden;
+  color: $c-white;
+  letter-spacing: 1px;
+  display: inline-flex;
+  text-transform: uppercase;
+
+  &--tinny {
+    height: 24px;
+    font-weight: $fw-default;
+    letter-spacing: initial;
+  }
+
+  &--primary {
+    background-color: $c-primary;
+  }
+
+  &--secondary {
+    background-color: $c-secondary;
+  }
+}

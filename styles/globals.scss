@@ -1,0 +1,42 @@
+html,
+body {
+  font-family: $ff-sans-serif;
+  font-size: $fs-default;
+  color: $c-text;
+  line-height: $lh-default;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  @include h1-heading;
+}
+
+h2 {
+  @include h2-heading;
+}
+
+h3 {
+  @include h3-heading;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+video {
+  vertical-align: middle;
+}

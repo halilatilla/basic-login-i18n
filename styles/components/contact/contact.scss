@@ -1,0 +1,54 @@
+.contact {
+  margin-bottom: 375px;
+  position: relative;
+
+  &__bg {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 632px;
+    background-color: $c-tertiary;
+    display: flex;
+    justify-content: flex-end;
+
+    div {
+      transform: translateX(470px) rotate(320deg);
+      right: 0;
+    }
+  }
+
+  &__box {
+    min-height: 810px;
+    @include card-wrapper;
+    @include d-flex;
+    background-color: $c-white;
+    position: relative;
+    top: 64px;
+    padding: 74px 80px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact {
+    margin-bottom: 116px;
+
+    &__box {
+      top: 48px;
+    }
+    &-form {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact {
+    &__box {
+      padding: 32px 24px;
+      max-width: 346px;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-element {
+  color: inherit;
+  font-size: $fs-medium;
+  border: 1px solid rgba($c-text-bold, 0.3);
+  border-radius: $border-radius;
+  max-width: 100%;
+  min-height: 50px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  &:focus {
+    outline-color: $c-text-bold;
+  }
+
+  &::placeholder {
+    font-size: $fs-medium;
+    color: #a8a8a8;
+  }
+
+  &--required {
+    border-color: red;
+  }
+}
+
+textarea {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.form-label {
+  color: $c-text-bold;
+  font-weight: $fw-bold;
+  margin-bottom: 6px;
+  line-height: 22px;
+  font-size: $fs-small;
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

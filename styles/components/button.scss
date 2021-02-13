@@ -1,0 +1,26 @@
+.button {
+  @include d-flex;
+  border-radius: $s-border-radius;
+  font-size: $fs-medium;
+  font-weight: $fs-medium;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  color: $c-white;
+
+  &:hover {
+    box-shadow: $box-shadow !important;
+  }
+
+  &--primary {
+    background-color: $c-primary;
+  }
+
+  &--secondary {
+    background-color: $c-secondary;
+  }
+}

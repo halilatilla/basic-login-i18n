@@ -1,0 +1,35 @@
+@mixin d-flex($ai: center, $jc: center) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin card-wrapper {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  background-color: $c-white;
+}
+
+@mixin default-heading {
+  margin: 0;
+  color: $c-text-bold;
+  font-weight: $fw-bold;
+}
+
+@mixin h1-heading {
+  @include default-heading;
+  font-size: 56px;
+  line-height: 78px;
+}
+
+@mixin h2-heading {
+  @include default-heading;
+  font-size: 46px;
+  line-height: 58px;
+}
+
+@mixin h3-heading {
+  @include default-heading;
+  font-size: 20px;
+  line-height: 28px;
+}
