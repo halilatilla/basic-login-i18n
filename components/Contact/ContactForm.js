@@ -6,18 +6,18 @@ import { Input, Textarea, Button } from '@/components/index'
 const ContactForm = ({ t }) => {
   return (
     <div className="contact-form">
-      <h3 className="contact-form__title">{t('formTitle')} :</h3>
+      <h3 className="contact-form__title">{t('contact:formTitle')} :</h3>
       <form className="contact-form__form">
-        <Input label={t('name')} name="name" type="text" />
-        <Input label={t('email')} name="email" type="email" />
-        <Input label={t('phone')} name="phone" type="phone" />
+        <Input label={t('form:name')} name="name" type="text" />
+        <Input label={t('form:email')} name="email" type="email" />
+        <Input label={t('form:phone')} name="phone" type="phone" />
         <Textarea
-          label={t('message')}
+          label={t('form:message')}
           name="message"
           placeholder="Mesaj yazınız"
         />
         <Button isPrimary type="submit">
-          {t('formButton')}
+          {t('form:submit')}
         </Button>
       </form>
     </div>
@@ -25,7 +25,7 @@ const ContactForm = ({ t }) => {
 }
 
 ContactForm.getInitialProps = async () => ({
-  namespacesRequired: ['contact'],
+  namespacesRequired: ['contact,form'],
 })
 
 export default withTranslation('contact')(ContactForm)

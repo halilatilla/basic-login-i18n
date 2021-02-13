@@ -14,7 +14,7 @@ export { default as Textarea } from './Form/Textarea'
 
 //Popups
 export { default as Modal } from './Modals/Modal'
-export { default as LoginModal } from './Modals/LoginModal'
+export { default as ModalLogin } from './Modals/ModalLogin'
 
 //Contact
 export { default as Contact } from './Contact/Contact'

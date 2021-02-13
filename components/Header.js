@@ -5,17 +5,19 @@ import cx from 'classnames'
 import { motion } from 'framer-motion'
 
 import { withTranslation } from '../i18n'
+import { useUserContext } from '@/stores/index'
 import {
   Nav,
   Button,
   MenuToggle,
   LanguageSwitcher,
-  LoginModal,
+  ModalLogin,
 } from '@/components/index'
 
 const Header = ({ t }) => {
   const [isShowMobile, setIsShowMobile] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
+  const { user } = useUserContext()
 
   const variants = {
     open: {
@@ -28,7 +30,7 @@ const Header = ({ t }) => {
 
   return (
     <>
-      <LoginModal
+      <ModalLogin
         isOpen={isShowModal}
         closeModal={() => setIsShowModal(false)}
       />
@@ -59,9 +61,13 @@ const Header = ({ t }) => {
               <LanguageSwitcher />
             </div>
             <div className="header__login-button">
-              <Button onClick={() => setIsShowModal(true)} isPrimary>
-                {t('login')}{' '}
-              </Button>
+              {user.name ? (
+                <Button>{user.name}</Button>
+              ) : (
+                <Button onClick={() => setIsShowModal(true)} isPrimary>
+                  {t('login')}{' '}
+                </Button>
+              )}
             </div>
           </div>
           <motion.div

@@ -6,7 +6,7 @@ import { DefaultSeo } from 'next-seo'
 import { appWithTranslation } from '../i18n'
 
 import SEO from '../next-seo.config'
-import { LangProvider } from '@/stores/index'
+import { LangProvider, UserProvider } from '@/stores/index'
 import { Layout } from '@/components/index'
 
 import '../styles/index.scss'
@@ -23,9 +23,11 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo {...SEO} />
       <LangProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <UserProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </UserProvider>
       </LangProvider>
     </>
   )

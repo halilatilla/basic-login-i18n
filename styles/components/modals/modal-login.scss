@@ -1,4 +1,6 @@
-.login-modal {
+.modal-login {
+  max-width: 370px;
+
   &__form {
     @include d-flex($ai: space-between);
     flex-direction: column;

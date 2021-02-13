@@ -14,10 +14,6 @@
   padding-left: 24px;
   padding-right: 24px;
 
-  &:focus {
-    outline-color: $c-text-bold;
-  }
-
   &::placeholder {
     font-size: $fs-medium;
     color: #a8a8a8;

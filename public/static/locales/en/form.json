@@ -1,0 +1,9 @@
+{
+  "name": "name surname",
+  "email": "e-mail",
+  "phone": "phone",
+  "password": "password",
+  "message": "message",
+  "submit": "sent",
+  "cancel": "cancel"
+}
