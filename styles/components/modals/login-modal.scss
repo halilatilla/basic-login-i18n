@@ -1,0 +1,28 @@
+.login-modal {
+  &__form {
+    @include d-flex($ai: space-between);
+    flex-direction: column;
+    margin-top: 52px;
+
+    .form {
+      &-container {
+        margin-bottom: 24px;
+      }
+
+      &-element {
+        width: 300px;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 22px;
+    @include d-flex;
+
+    .button {
+      margin-left: auto;
+      width: 120px;
+      text-transform: capitalize;
+    }
+  }
+}

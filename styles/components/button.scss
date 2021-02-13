@@ -23,4 +23,10 @@
   &--secondary {
     background-color: $c-secondary;
   }
+
+  &--outline {
+    background-color: $c-white;
+    border: 1px solid $c-primary;
+    color: $c-primary;
+  }
 }

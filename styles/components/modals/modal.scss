@@ -1,8 +1,9 @@
 .modal {
   @include d-flex;
+  flex-direction: column;
   @include card-wrapper;
-  width: 70%;
-  height: 70%;
+  width: 400px;
+  height: 500px;
   margin-top: 122px;
   background-color: $c-white;
   margin-left: auto;
@@ -28,6 +29,12 @@
     &:hover {
       background-color: $c-background;
     }
+  }
+
+  .language-switcher {
+    position: absolute;
+    left: 12px;
+    top: 12px;
   }
 }
 

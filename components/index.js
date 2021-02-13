@@ -5,13 +5,16 @@ export { default as Nav } from './Nav'
 export { default as Button } from './Button'
 export { default as Badge } from './Badge'
 export { default as ActiveLink } from './ActiveLink'
-export { default as Modal } from './Popups/Modal'
 export { default as MenuToggle } from './MenuToggle'
 export { default as LanguageSwitcher } from './LanguageSwitcher'
 
 //From
 export { default as Input } from './Form/Input'
 export { default as Textarea } from './Form/Textarea'
+
+//Popups
+export { default as Modal } from './Modals/Modal'
+export { default as LoginModal } from './Modals/LoginModal'
 
 //Contact
 export { default as Contact } from './Contact/Contact'

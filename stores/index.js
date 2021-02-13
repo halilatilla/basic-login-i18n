@@ -1,1 +1,1 @@
-export { AuthProvider, useAuthContext } from "./AuthContext";
+export { LangProvider, useLangContext } from './LangContext'

@@ -3,6 +3,8 @@
   "name": "name surname",
   "email": "e-mail",
   "phone": "phone",
+  "password": "password",
   "message": "message",
-  "formButton": "sent"
+  "formButton": "sent",
+  "cancel": "cancel"
 }

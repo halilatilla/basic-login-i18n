@@ -3,6 +3,8 @@
   "name": "isim soyisim",
   "email": "e-mail",
   "phone": "telefon",
+  "password": "şifre",
   "message": "mesaj",
-  "formButton": "gönder"
+  "formButton": "gönder",
+  "cancel": "vazgeç"
 }

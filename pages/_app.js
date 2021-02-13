@@ -6,7 +6,7 @@ import { DefaultSeo } from 'next-seo'
 import { appWithTranslation } from '../i18n'
 
 import SEO from '../next-seo.config'
-import { AuthProvider } from 'stores'
+import { LangProvider } from '@/stores/index'
 import { Layout } from '@/components/index'
 
 import '../styles/index.scss'
@@ -22,11 +22,11 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <DefaultSeo {...SEO} />
-      <AuthProvider>
+      <LangProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </AuthProvider>
+      </LangProvider>
     </>
   )
 }
