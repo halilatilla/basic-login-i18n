@@ -24,8 +24,11 @@
   }
 
   &__required-text {
-    font-size: $fs-small;
+    font-size: 12px;
     color: red;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
   }
 }
 
