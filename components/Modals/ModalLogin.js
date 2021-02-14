@@ -20,8 +20,9 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
       email: Yup.string().email().required(),
       password: Yup.string().required(),
     }),
-    onSubmit: value => {
+    onSubmit: (value, { resetForm }) => {
       setUser({ name: value.name, email: value.email })
+      resetForm()
       closeModal()
     },
   })
@@ -35,7 +36,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           label={t('name')}
           name="name"
           type="text"
-          isRequiredError={!!formik.errors.name}
+          isRequiredError={formik.errors.name && formik.touched.name}
         />
         <Input
           onChange={formik.handleChange}
@@ -43,7 +44,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           label={t('email')}
           name="email"
           type="email"
-          isRequiredError={!!formik.errors.email}
+          isRequiredError={formik.errors.email && formik.touched.email}
         />
         <Input
           onChange={formik.handleChange}
@@ -51,7 +52,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           label={t('password')}
           name="password"
           type="password"
-          isRequiredError={!!formik.errors.password}
+          isRequiredError={formik.errors.password && formik.touched.password}
         />
         <LanguageSwitcher />
         <div className="modal-login__buttons">

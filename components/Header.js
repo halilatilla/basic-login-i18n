@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import cx from 'classnames'
 import { motion } from 'framer-motion'
+import Popover from '@tippyjs/react'
 
 import { withTranslation } from '../i18n'
 import { useUserContext } from '@/stores/index'
@@ -17,7 +18,7 @@ import {
 const Header = ({ t }) => {
   const [isShowMobile, setIsShowMobile] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
-  const { user } = useUserContext()
+  const { user, setUser } = useUserContext()
 
   const variants = {
     open: {
@@ -26,6 +27,21 @@ const Header = ({ t }) => {
     closed: {
       transition: { staggerChildren: 0.05 },
     },
+  }
+
+  const logout = () => {
+    setUser({ ...user, name: '', email: '' })
+  }
+
+  const PopOverContent = () => {
+    return (
+      <div className="header__popover-content">
+        <p className="header__popover-email">{user.email}</p>
+        <Button onClick={logout} isPrimary>
+          {t('header:logout')}
+        </Button>
+      </div>
+    )
   }
 
   return (
@@ -63,7 +79,15 @@ const Header = ({ t }) => {
             </div>
             <div className="header__login-button">
               {user.name ? (
-                <span>{user.name}</span>
+                <Popover
+                  content={<PopOverContent />}
+                  theme="light-border"
+                  interactive
+                >
+                  <span>
+                    <Button isOutline>{user.name}</Button>
+                  </span>
+                </Popover>
               ) : (
                 <Button onClick={() => setIsShowModal(true)} isPrimary>
                   {t('login')}

@@ -22,6 +22,7 @@ const ContactForm = ({ t }) => {
   ]
 
   const formik = useFormik({
+    enableReinitialize: true,
     initialValues: {
       name: user.name,
       email: user.email,
@@ -49,7 +50,7 @@ const ContactForm = ({ t }) => {
 
   const onChangeHandler = option => {
     if (!option) {
-      formik.setFieldValue('selectCountry', null)
+      formik.setFieldValue('selectCountry', '')
       return
     }
     formik.setFieldValue('selectCountry', option.value)
@@ -65,7 +66,7 @@ const ContactForm = ({ t }) => {
           type="text"
           onChange={formik.handleChange}
           value={formik.values.name}
-          isRequiredError={!!formik.errors.name}
+          isRequiredError={formik.errors.name && formik.touched.name}
         />
         <Input
           label={t('form:email')}
@@ -73,7 +74,7 @@ const ContactForm = ({ t }) => {
           type="email"
           onChange={formik.handleChange}
           value={formik.values.email}
-          isRequiredError={!!formik.errors.email}
+          isRequiredError={formik.errors.email && formik.touched.email}
         />
         <Input
           label={t('form:phone')}
@@ -82,7 +83,7 @@ const ContactForm = ({ t }) => {
           onChange={formik.handleChange}
           value={formik.values.phone}
           requiredText={t('form:invalidPhone')}
-          isRequiredError={!!formik.errors.phone}
+          isRequiredError={formik.errors.phone && formik.touched.phone}
         />
         <Select
           placeholder={t('form:selectPlaceholder')}
@@ -90,7 +91,9 @@ const ContactForm = ({ t }) => {
           label={t('form:selectCountry')}
           options={countryList}
           onChange={onChangeHandler}
-          isRequiredError={!!formik.errors.selectCountry}
+          isRequiredError={
+            formik.errors.selectCountry && formik.touched.selectCountry
+          }
         />
         <Textarea
           label={t('form:message')}
@@ -98,7 +101,7 @@ const ContactForm = ({ t }) => {
           placeholder={t('form:messagePlaceholder')}
           onChange={formik.handleChange}
           value={formik.values.message}
-          isRequiredError={!!formik.errors.message}
+          isRequiredError={formik.errors.message && formik.touched.message}
         />
         <Button isPrimary type="submit">
           {t('form:submit')}

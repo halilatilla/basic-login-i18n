@@ -5,6 +5,11 @@
     border-color: rgba($c-text-bold, 0.3) !important;
   }
 
+  &__placeholder {
+    font-size: $fs-medium;
+    color: #a8a8a8 !important;
+  }
+
   &--required {
     .select__control {
       box-shadow: none !important;

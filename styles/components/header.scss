@@ -40,6 +40,23 @@
       width: 175px;
     }
   }
+
+  &__popover {
+    &-content {
+      padding: 18px;
+      @include d-flex;
+      flex-direction: column;
+
+      .button {
+        width: 120px;
+        margin-top: 12px;
+      }
+    }
+
+    &-email {
+      font-weight: $fw-bold;
+    }
+  }
 }
 
 @media (max-width: 767px) {

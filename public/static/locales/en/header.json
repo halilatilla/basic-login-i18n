@@ -1,4 +1,5 @@
 {
   "siteName": "basic login app",
-  "login": "login"
+  "login": "login",
+  "logout": "logout"
 }

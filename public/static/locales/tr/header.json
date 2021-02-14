@@ -1,4 +1,5 @@
 {
   "siteName": "basit giriş app",
-  "login": "giriş yap"
+  "login": "giriş yap",
+  "logout": "çıkış yap"
 }
