@@ -7,14 +7,14 @@ import { Select } from '@/components/index'
 
 const languages = [
   {
-    value: 'en',
-    label: 'EN',
-    flag: 'united-kingdom',
-  },
-  {
     value: 'tr',
     label: 'TR',
     flag: 'turkey',
+  },
+  {
+    value: 'en',
+    label: 'EN',
+    flag: 'united-kingdom',
   },
 ]
 
@@ -32,7 +32,13 @@ export default function LanguageSwitcher() {
 
   const formatOptionLabel = ({ label, flag }) => (
     <div className="language-switcher__label">
-      <Image src={`/flags/${flag}.svg`} quality="100" width={20} height={20} />
+      <Image
+        src={`/flags/${flag}.svg`}
+        quality="100"
+        priority
+        width={20}
+        height={20}
+      />
       <span>{label}</span>
     </div>
   )
@@ -53,15 +59,6 @@ export default function LanguageSwitcher() {
             ? { value: 'tr', label: 'TR', flag: 'turkey' }
             : { value: 'en', label: 'EN', flag: 'united-kingdom' }
         }
-        /* defaultValue={
-          lang
-            ? lang === 'tr'
-              ? { value: 'tr', label: 'TR', flag: 'turkey' }
-              : { value: 'en', label: 'EN', flag: 'united-kingdom' }
-            : i18n.language === 'tr'
-            ? { value: 'tr', label: 'TR', flag: 'turkey' }
-            : { value: 'en', label: 'EN', flag: 'united-kingdom' }
-        } */
         onChange={onChangeHandler}
       />
     </div>

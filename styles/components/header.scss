@@ -98,11 +98,16 @@
 
     &__language-switcher {
       margin-left: 0;
-      margin-bottom: 12px;
+      margin-bottom: 32px;
     }
 
     &__login-button {
       margin-left: 0;
+    }
+
+    &__popover-email {
+      margin-top: 12px;
+      text-align: center;
     }
   }
 }
