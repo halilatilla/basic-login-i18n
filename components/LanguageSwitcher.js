@@ -38,6 +38,7 @@ export default function LanguageSwitcher() {
         priority
         width={20}
         height={20}
+        alt={flag}
       />
       <span>{label}</span>
     </div>
