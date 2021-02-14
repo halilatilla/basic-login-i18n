@@ -23,7 +23,6 @@ export default function LanguageSwitcher() {
   const { lang, setLang } = useLangContext()
 
   const onChangeHandler = e => {
-    console.log(e)
     if (e) {
       i18n.changeLanguage(e.value)
       setLang(e.value)
