@@ -1,6 +1,4 @@
 .modal-login {
-  max-width: 370px;
-
   &__form {
     @include d-flex($ai: space-between);
     flex-direction: column;
@@ -26,6 +24,12 @@
       width: 120px;
       text-transform: capitalize;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .modal-login {
+    max-width: 370px;
   }
 }
 
