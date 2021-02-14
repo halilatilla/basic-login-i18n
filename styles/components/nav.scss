@@ -25,14 +25,6 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .nav {
-    &__list__item {
-      font-size: $fs-small;
-    }
-  }
-}
-
 @media (max-width: 991px) {
   .nav {
     &__list {
@@ -41,6 +33,7 @@
       margin-top: 32px;
 
       &__item {
+        margin-left: 0;
         margin-bottom: 12px;
       }
     }

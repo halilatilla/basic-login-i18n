@@ -4,6 +4,7 @@ import Link from 'next/link'
 import cx from 'classnames'
 import { motion } from 'framer-motion'
 import Popover from '@tippyjs/react'
+import { useMediaQuery } from 'react-responsive'
 
 import { withTranslation } from '../i18n'
 import { useUserContext } from '@/stores/index'
@@ -19,6 +20,7 @@ const Header = ({ t }) => {
   const [isShowMobile, setIsShowMobile] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
   const { user, setUser } = useUserContext()
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 991px)' })
 
   const variants = {
     open: {
@@ -79,15 +81,26 @@ const Header = ({ t }) => {
             </div>
             <div className="header__login-button">
               {user.name ? (
-                <Popover
-                  content={<PopOverContent />}
-                  theme="light-border"
-                  interactive
-                >
-                  <span>
-                    <Button isOutline>{user.name}</Button>
-                  </span>
-                </Popover>
+                <>
+                  <Popover
+                    content={<PopOverContent />}
+                    theme="light-border"
+                    interactive
+                    disabled={isTabletOrMobile}
+                  >
+                    <span>
+                      <Button isOutline>{user.name}</Button>
+                    </span>
+                  </Popover>
+                  {isTabletOrMobile && (
+                    <div>
+                      <p className="header__popover-email">{user.email}</p>
+                      <Button onClick={logout} isPrimary>
+                        {t('header:logout')}
+                      </Button>
+                    </div>
+                  )}
+                </>
               ) : (
                 <Button onClick={() => setIsShowModal(true)} isPrimary>
                   {t('login')}

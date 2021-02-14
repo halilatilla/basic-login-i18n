@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header {
     height: $s-header-height-mobile;
 
@@ -94,6 +94,11 @@
           color: $c-white;
         }
       }
+    }
+
+    &__language-switcher {
+      margin-left: 0;
+      margin-bottom: 12px;
     }
 
     &__login-button {

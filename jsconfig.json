@@ -6,8 +6,7 @@
       "@/icons/*": ["icons/*"],
       "@/client/*": ["client/*"],
       "@/stores/*": ["stores/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/next-seo.config/*": ["next-seo.config/*"]
+      "@/hooks/*": ["hooks/*"]
     }
   }
 }

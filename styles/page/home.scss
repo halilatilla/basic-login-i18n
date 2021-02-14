@@ -10,6 +10,25 @@
 
   &__description {
     margin-top: 42px;
-    //text-transform: capitalize;
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .home {
+    min-height: calc(100vh - #{$s-header-height-mobile} - #{$s-footer-height});
+
+    &__title {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home {
+    min-height: calc(
+      100vh - #{$s-header-height-mobile} - #{$s-footer-height-mobile}
+    );
   }
 }
