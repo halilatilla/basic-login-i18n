@@ -5,6 +5,16 @@
   background-color: $c-white;
   border-bottom: 1px solid rgba($c-text, 0.2);
 
+  &__logo {
+    @include d-flex;
+    &__text {
+      color: $c-text-bold;
+      font-weight: $fw-bold;
+      font-size: 20px;
+      margin-left: 12px;
+    }
+  }
+
   &__hamburger-menu {
     display: none;
   }
@@ -43,10 +53,6 @@
         height: auto;
         padding: 0;
       }
-    }
-
-    &__logo {
-      max-width: 227px;
     }
 
     &__content {

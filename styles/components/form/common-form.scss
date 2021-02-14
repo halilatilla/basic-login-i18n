@@ -22,6 +22,11 @@
   &--required {
     border-color: red;
   }
+
+  &__required-text {
+    font-size: $fs-small;
+    color: red;
+  }
 }
 
 textarea {

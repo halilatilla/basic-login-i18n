@@ -41,12 +41,13 @@ const Header = ({ t }) => {
             <a className="header__logo">
               <Image
                 src="/logo.svg"
-                width={272}
+                width={62}
                 height={54}
                 priority
                 alt="site logo"
                 quality="100"
               />
+              <span className="header__logo__text">Basic Login</span>
             </a>
           </Link>
           <div
@@ -62,10 +63,10 @@ const Header = ({ t }) => {
             </div>
             <div className="header__login-button">
               {user.name ? (
-                <Button>{user.name}</Button>
+                <span>{user.name}</span>
               ) : (
                 <Button onClick={() => setIsShowModal(true)} isPrimary>
-                  {t('login')}{' '}
+                  {t('login')}
                 </Button>
               )}
             </div>

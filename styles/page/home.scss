@@ -1,5 +1,15 @@
 .home {
   min-height: calc(100vh - #{$s-header-height} - #{$s-footer-height});
   @include d-flex;
-  text-transform: uppercase;
+  flex-direction: column;
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__description {
+    margin-top: 42px;
+    //text-transform: capitalize;
+  }
 }

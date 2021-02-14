@@ -5,5 +5,18 @@
   "password": "şifre",
   "message": "mesaj",
   "submit": "gönder",
-  "cancel": "vazgeç"
+  "cancel": "vazgeç",
+  "selectCountry": "ülke seç",
+  "messagePlaceholder": "Mesaj yazınız",
+  "selectPlaceholder": "Bir ülke seç veya ara",
+  "required": "Bu alan boş bırakılamaz.",
+  "invalidPhone": "Geçersiz telefon numarası.",
+  "TR": "Türkiye",
+  "US": "Amerka Birleşik Devletleri",
+  "GB": "İngiltere",
+  "DE": "Almanya",
+  "SE": "İsveç",
+  "KE": "Kenya",
+  "BR": "Brezilya",
+  "ZW": "Zimbabve"
 }

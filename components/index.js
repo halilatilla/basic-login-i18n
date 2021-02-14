@@ -11,11 +11,11 @@ export { default as LanguageSwitcher } from './LanguageSwitcher'
 //From
 export { default as Input } from './Form/Input'
 export { default as Textarea } from './Form/Textarea'
+export { default as Select } from './Form/Select'
 
 //Popups
 export { default as Modal } from './Modals/Modal'
 export { default as ModalLogin } from './Modals/ModalLogin'
 
 //Contact
-export { default as Contact } from './Contact/Contact'
 export { default as ContactForm } from './Contact/ContactForm'

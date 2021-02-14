@@ -2,18 +2,6 @@ import React from 'react'
 
 import { withTranslation } from '../i18n'
 import { ActiveLink } from '@/components/index'
-const navItems = [
-  {
-    title: 'Anasayfa',
-    path: '/',
-    as: 'anasayfa',
-  },
-  {
-    title: 'İletişim',
-    path: '/contact',
-    as: 'iletisim',
-  },
-]
 
 const Nav = ({ t }) => {
   return (

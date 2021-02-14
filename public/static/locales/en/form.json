@@ -5,5 +5,18 @@
   "password": "password",
   "message": "message",
   "submit": "sent",
-  "cancel": "cancel"
+  "cancel": "cancel",
+  "selectCountry": "Select Country",
+  "messagePlaceholder": "Write message",
+  "selectPlaceholder": "Select a country or search it",
+  "required": "This field is required.",
+  "invalidPhone": "Invalid phone number",
+  "TR": "Turkey",
+  "US": "United States of America",
+  "GB": "United Kingdom",
+  "DE": "Germany",
+  "SE": "Sweden",
+  "KE": "Kenya",
+  "BR": "Brazil",
+  "ZW": "Zimbabwe"
 }

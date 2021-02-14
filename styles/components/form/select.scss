@@ -1,0 +1,38 @@
+.select {
+  &__control {
+    min-height: 50px !important;
+    border-radius: $border-radius !important;
+    border-color: rgba($c-text-bold, 0.3) !important;
+  }
+
+  &--required {
+    .select__control {
+      box-shadow: none !important;
+      border-color: red !important;
+
+      &--is-focused {
+        border-color: red !important;
+        outline-color: red !important;
+      }
+    }
+  }
+
+  &__menu {
+    border-radius: $border-radius !important;
+    background-color: $c-white !important;
+    border: 1px solid rgba($c-text-bold, 0.3);
+
+    &-list {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  &__option {
+    border-bottom: 1px solid rgba($c-text-bold, 0.3);
+
+    &--is-selected {
+      color: $c-text !important;
+    }
+  }
+}

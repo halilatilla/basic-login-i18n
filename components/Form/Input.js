@@ -2,7 +2,10 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-export default function Input({
+import { withTranslation } from '../../i18n'
+
+const Input = ({
+  t,
   label,
   autoFocus,
   onChange,
@@ -10,10 +13,11 @@ export default function Input({
   name,
   className,
   isRequiredError,
+  requiredText,
   type,
   min,
   max,
-}) {
+}) => {
   return (
     <label className={cx('form-container', { [`${className}`]: className })}>
       {label && <span className="form-label">{label}</span>}
@@ -30,6 +34,11 @@ export default function Input({
         min={min}
         max={max}
       />
+      {isRequiredError && (
+        <span className="form-element__required-text">
+          {requiredText || t('required')}
+        </span>
+      )}
     </label>
   )
 }
@@ -47,3 +56,9 @@ Input.propTypes = {
   autoFocus: PropTypes.bool,
   isRequiredError: PropTypes.bool,
 }
+
+Input.getInitialProps = async () => ({
+  namespacesRequired: ['form'],
+})
+
+export default withTranslation('form')(Input)

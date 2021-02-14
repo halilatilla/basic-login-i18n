@@ -2,7 +2,9 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-export default function Textarea({
+import { withTranslation } from '../../i18n'
+const Textarea = ({
+  t,
   label,
   autoFocus,
   onChange,
@@ -11,7 +13,7 @@ export default function Textarea({
   placeholder,
   className,
   isRequiredError,
-}) {
+}) => {
   return (
     <label className={cx('form-container', { [`${className}`]: className })}>
       {label && <span className="form-label">{label}</span>}
@@ -25,6 +27,9 @@ export default function Textarea({
         name={name}
         placeholder={placeholder}
       />
+      {isRequiredError && (
+        <span className="form-element__required-text"> {t('required')}</span>
+      )}
     </label>
   )
 }
@@ -43,3 +48,9 @@ Textarea.propTypes = {
   isRequiredError: PropTypes.bool,
   placeholder: PropTypes.string,
 }
+
+Textarea.getInitialProps = async () => ({
+  namespacesRequired: ['form'],
+})
+
+export default withTranslation('form')(Textarea)

@@ -3,7 +3,12 @@ import React from 'react'
 import { withTranslation } from '../i18n'
 
 const Home = ({ t }) => {
-  return <div className="home container">{t('homePageTitle')}</div>
+  return (
+    <main className="home container">
+      <h1 className="home__title">{t('title')}</h1>
+      <p className="home__description"> {t('description')} </p>
+    </main>
+  )
 }
 
 Home.getInitialProps = async () => ({

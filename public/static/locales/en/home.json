@@ -1,3 +1,4 @@
 {
-  "homePageTitle": "welcome to basic login application."
+  "title": "welcome to basic login application.",
+  "description": "With this application, you can do your login operations in a simple way."
 }
