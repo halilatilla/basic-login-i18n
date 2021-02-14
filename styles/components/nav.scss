@@ -35,6 +35,11 @@
       &__item {
         margin-left: 0;
         margin-bottom: 12px;
+        border-bottom: 1px solid rgba($c-white, 0.2);
+
+        &:hover {
+          color: $c-white;
+        }
       }
     }
   }

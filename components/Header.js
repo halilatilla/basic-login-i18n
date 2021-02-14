@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import cx from 'classnames'
 import { motion } from 'framer-motion'
 import Popover from '@tippyjs/react'
@@ -17,6 +18,7 @@ import {
 } from '@/components/index'
 
 const Header = ({ t }) => {
+  const router = useRouter()
   const [isShowMobile, setIsShowMobile] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
   const { user, setUser } = useUserContext()
@@ -45,6 +47,10 @@ const Header = ({ t }) => {
       </div>
     )
   }
+
+  useEffect(() => {
+    setIsShowMobile(false)
+  }, [router.pathname])
 
   return (
     <>
