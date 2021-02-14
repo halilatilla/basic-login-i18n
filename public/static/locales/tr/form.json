@@ -11,6 +11,7 @@
   "selectPlaceholder": "Bir ülke seç veya ara",
   "required": "Bu alan boş bırakılamaz.",
   "invalidPhone": "Geçersiz telefon numarası.",
+  "invalidEmail": "Geçersiz email adresi.",
   "TR": "Türkiye",
   "US": "Amerka Birleşik Devletleri",
   "GB": "İngiltere",

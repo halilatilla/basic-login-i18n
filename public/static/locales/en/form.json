@@ -11,6 +11,7 @@
   "selectPlaceholder": "Select a country or search it",
   "required": "This field is required.",
   "invalidPhone": "Invalid phone number",
+  "invalidEmail": "Invalid email address",
   "TR": "Turkey",
   "US": "United States of America",
   "GB": "United Kingdom",

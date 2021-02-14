@@ -27,24 +27,38 @@ const ContactForm = ({ t }) => {
       name: user.name,
       email: user.email,
       phone: '',
-      selectCountry: '',
+      selectCountry: { value: null, label: null },
       message: '',
     },
     validationSchema: Yup.object({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
       phone: Yup.string().matches(phoneRegExp).required(),
-      selectCountry: Yup.string().required(),
-      message: Yup.string().required(),
+      selectCountry: Yup.string(),
+      message: Yup.string(),
     }),
-    onSubmit: value => {
+    onSubmit: (value, { resetForm }) => {
+      alert(
+        JSON.stringify(
+          {
+            name: value.name,
+            email: value.email,
+            phonenumber: value.phone,
+            country_code: value.selectCountry.value,
+            text: value.message,
+          },
+          null,
+          4
+        )
+      )
       console.log({
         name: value.name,
         email: value.email,
         phonenumber: value.phone,
-        country_code: value.selectCountry,
+        country_code: value.selectCountry.value,
         text: value.message,
       })
+      resetForm()
     },
   })
 
@@ -53,7 +67,7 @@ const ContactForm = ({ t }) => {
       formik.setFieldValue('selectCountry', '')
       return
     }
-    formik.setFieldValue('selectCountry', option.value)
+    formik.setFieldValue('selectCountry', option)
   }
 
   return (
@@ -67,6 +81,7 @@ const ContactForm = ({ t }) => {
           onChange={formik.handleChange}
           value={formik.values.name}
           isRequiredError={formik.errors.name && formik.touched.name}
+          isRequiredSign
         />
         <Input
           label={t('form:email')}
@@ -74,7 +89,9 @@ const ContactForm = ({ t }) => {
           type="email"
           onChange={formik.handleChange}
           value={formik.values.email}
+          requiredText={t('form:invalidEmail')}
           isRequiredError={formik.errors.email && formik.touched.email}
+          isRequiredSign
         />
         <Input
           label={t('form:phone')}
@@ -84,6 +101,7 @@ const ContactForm = ({ t }) => {
           value={formik.values.phone}
           requiredText={t('form:invalidPhone')}
           isRequiredError={formik.errors.phone && formik.touched.phone}
+          isRequiredSign
         />
         <Select
           placeholder={t('form:selectPlaceholder')}
@@ -91,8 +109,10 @@ const ContactForm = ({ t }) => {
           label={t('form:selectCountry')}
           options={countryList}
           onChange={onChangeHandler}
-          isRequiredError={
-            formik.errors.selectCountry && formik.touched.selectCountry
+          value={
+            formik.values.selectCountry.label
+              ? formik.values.selectCountry
+              : null
           }
         />
         <Textarea
@@ -101,7 +121,6 @@ const ContactForm = ({ t }) => {
           placeholder={t('form:messagePlaceholder')}
           onChange={formik.handleChange}
           value={formik.values.message}
-          isRequiredError={formik.errors.message && formik.touched.message}
         />
         <Button isPrimary type="submit">
           {t('form:submit')}

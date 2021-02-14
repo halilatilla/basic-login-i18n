@@ -37,6 +37,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           name="name"
           type="text"
           isRequiredError={formik.errors.name && formik.touched.name}
+          isRequiredSign
         />
         <Input
           onChange={formik.handleChange}
@@ -45,6 +46,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           name="email"
           type="email"
           isRequiredError={formik.errors.email && formik.touched.email}
+          isRequiredSign
         />
         <Input
           onChange={formik.handleChange}
@@ -53,6 +55,7 @@ const LoginModal = ({ t, isOpen, closeModal }) => {
           name="password"
           type="password"
           isRequiredError={formik.errors.password && formik.touched.password}
+          isRequiredSign
         />
         <LanguageSwitcher />
         <div className="modal-login__buttons">

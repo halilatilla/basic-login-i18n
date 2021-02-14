@@ -28,3 +28,15 @@
     }
   }
 }
+
+@media (max-width: 330px) {
+  .modal-login {
+    max-width: 320px;
+
+    &__form {
+      .form-element {
+        width: 270px;
+      }
+    }
+  }
+}

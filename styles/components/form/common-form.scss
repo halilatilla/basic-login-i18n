@@ -44,4 +44,14 @@ textarea {
   position: relative;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  &--required {
+    &::after {
+      content: '*';
+      position: absolute;
+      color: red;
+      left: -8px;
+      top: -2px;
+    }
+  }
 }

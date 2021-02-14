@@ -13,6 +13,7 @@ const Input = ({
   name,
   className,
   isRequiredError,
+  isRequiredSign,
   requiredText,
   type,
   min,
@@ -20,7 +21,15 @@ const Input = ({
 }) => {
   return (
     <label className={cx('form-container', { [`${className}`]: className })}>
-      {label && <span className="form-label">{label}</span>}
+      {label && (
+        <span
+          className={cx('form-label', {
+            'form-label--required': isRequiredSign,
+          })}
+        >
+          {label}
+        </span>
+      )}
 
       <input
         className={cx('form-element', {
