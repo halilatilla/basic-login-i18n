@@ -1,0 +1,19 @@
+.language-switcher {
+  .form-container {
+    width: 110px;
+    margin-bottom: 0;
+
+    .select__control {
+      height: 44px !important;
+      min-height: auto !important;
+    }
+  }
+
+  &__label {
+    @include d-flex;
+    span {
+      margin-left: 6px;
+      font-size: 16px;
+    }
+  }
+}

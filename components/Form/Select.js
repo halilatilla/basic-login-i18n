@@ -9,18 +9,22 @@ const CustomSelect = ({
   t,
   name,
   label,
+  value,
   options,
   onChange,
   placeholder,
   defaultValue,
   className,
   isRequiredError,
+  formatOptionLabel,
+  isClearable = true,
 }) => {
   return (
     <label className="form-container">
       {label && <span className="form-label">{label}</span>}
       <Select
         name={name}
+        value={value}
         onChange={onChange}
         className={cx(
           'select',
@@ -31,10 +35,11 @@ const CustomSelect = ({
         options={options}
         defaultValue={defaultValue}
         isSearchable
-        isClearable
+        isClearable={isClearable}
         aria-label={name}
         instanceId={name}
         placeholder={placeholder}
+        formatOptionLabel={formatOptionLabel}
         controlShouldRenderValue
       />
       {isRequiredError && (
