@@ -1,19 +1,12 @@
-import React from "react";
-import "../styles/index.scss";
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import { AuthProvider } from "../stores";
+import React from 'react'
+import '../styles/index.scss'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
   },
-};
+}
 
-export const decorators = [
-  (Story) => (
-    <AuthProvider>
-      <Story />
-    </AuthProvider>
-  ),
-];
+export const decorators = [Story => <Story />]

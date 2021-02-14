@@ -31,14 +31,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@storybook/addon-a11y": "^6.1.10",
-    "@storybook/addon-actions": "^6.1.10",
+    "@storybook/addon-a11y": "^6.1.18",
+    "@storybook/addon-actions": "^6.1.18",
     "@storybook/addon-contexts": "^5.3.21",
-    "@storybook/addon-essentials": "^6.1.10",
-    "@storybook/addon-links": "^6.1.10",
-    "@storybook/addon-viewport": "^6.1.10",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
+    "@storybook/addon-viewport": "^6.1.18",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.1.10",
+    "@storybook/react": "^6.1.18",
     "@svgr/plugin-jsx": "^5.4.0",
     "@svgr/webpack": "^5.4.0",
     "babel-loader": "^8.1.0",
@@ -48,7 +48,7 @@
     "react-is": "^16.13.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
-    "storybook-addon-next-router": "^2.0.2",
+    "storybook-addon-next-router": "^2.0.4",
     "style-loader": "^2.0.0"
   }
 }

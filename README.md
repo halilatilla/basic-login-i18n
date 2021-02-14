@@ -1,18 +1,3 @@
----
-
-## Storybook Development
-
-First, run the development server:
-
-npm run sb
-# or
-yarn sb
-```
-
-Open [http://localhost:6006](http://localhost:3000) with your browser to see the result.
-
----
-
 ## Next Development
 
 First, run the development server:
@@ -24,4 +9,18 @@ yarn dev
 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.---
+
+---
+
+## Storybook Development
+
+First, run the development server:
+
+```bash
+npm run sb
+# or
+yarn sb
+```
+
+Open [http://localhost:6006](http://localhost:3000) with your browser to see the result.
