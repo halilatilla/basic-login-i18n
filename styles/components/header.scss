@@ -69,6 +69,11 @@
       .button {
         height: auto;
         padding: 0;
+
+        svg {
+          padding-top: 4px;
+          padding-left: 2px;
+        }
       }
     }
 
@@ -76,7 +81,7 @@
       .header__right {
         flex-direction: column;
         background-color: black;
-        position: fixed;
+        position: absolute;
         justify-content: flex-start;
         left: 0;
         top: 86px;

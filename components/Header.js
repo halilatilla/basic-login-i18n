@@ -6,6 +6,7 @@ import cx from 'classnames'
 import { motion } from 'framer-motion'
 import Popover from '@tippyjs/react'
 import { useMediaQuery } from 'react-responsive'
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 import { withTranslation } from '../i18n'
 import { useUserContext } from '@/stores/index'
@@ -51,6 +52,10 @@ const Header = ({ t }) => {
   useEffect(() => {
     setIsShowMobile(false)
   }, [router.pathname])
+
+  useEffect(() => {
+    isShowMobile ? disableBodyScroll(ref) : clearAllBodyScrollLocks()
+  }, [isShowMobile])
 
   return (
     <>
