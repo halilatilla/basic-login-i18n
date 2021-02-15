@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -20,6 +20,7 @@ import {
 
 const Header = ({ t }) => {
   const router = useRouter()
+  const ref = useRef(null)
   const [isShowMobile, setIsShowMobile] = useState(false)
   const [isShowModal, setIsShowModal] = useState(false)
   const { user, setUser } = useUserContext()
@@ -64,7 +65,7 @@ const Header = ({ t }) => {
         closeModal={() => setIsShowModal(false)}
       />
 
-      <header className="header">
+      <header ref={ref} className="header">
         <div className="container header__content">
           <Link href="/">
             <a className="header__logo">
