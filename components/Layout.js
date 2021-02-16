@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 
 import { Header, Footer } from '@/components/index'
 
-export default function Layout({ children, isHome }) {
+export default function Layout({ children }) {
   return (
     <div className="layout">
-      <Header isHome={isHome} />
+      <Header />
       {children}
       <Footer />
     </div>
@@ -15,5 +15,4 @@ export default function Layout({ children, isHome }) {
 
 Layout.propTypes = {
   children: PropTypes.node,
-  isHome: PropTypes.bool,
 }

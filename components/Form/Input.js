@@ -64,6 +64,11 @@ Input.propTypes = {
   onChange: PropTypes.func,
   autoFocus: PropTypes.bool,
   isRequiredError: PropTypes.bool,
+  isRequiredSign: PropTypes.bool,
+  isRequiredText: PropTypes.string,
+  type: PropTypes.string,
+  min: PropTypes.number,
+  max: PropTypes.number,
 }
 
 Input.getInitialProps = async () => ({

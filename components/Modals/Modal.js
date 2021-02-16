@@ -29,7 +29,7 @@ export default function Modal({ children, className, isOpen, closeModal }) {
 }
 
 Modal.propTypes = {
-  isOpen: PropTypes.bool,
+  isOpen: PropTypes.bool.required,
   className: PropTypes.string,
   closeModal: PropTypes.func,
   children: PropTypes.any,
